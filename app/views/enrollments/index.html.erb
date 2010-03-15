@@ -1,0 +1,46 @@
+<h1>Listing enrollments</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Birthdate</th>
+    <th>Gender</th>
+    <th>Zip</th>
+    <th>State</th>
+    <th>City</th>
+    <th>Address</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Social security</th>
+    <th>User name</th>
+    <th>Password</th>
+    <th>Card option</th>
+  </tr>
+
+<% @enrollments.each do |enrollment| %>
+  <tr>
+    <td><%=h enrollment.first_name %></td>
+    <td><%=h enrollment.last_name %></td>
+    <td><%=h enrollment.birthdate %></td>
+    <td><%=h enrollment.gender %></td>
+    <td><%=h enrollment.zip %></td>
+    <td><%=h enrollment.state %></td>
+    <td><%=h enrollment.city %></td>
+    <td><%=h enrollment.address %></td>
+    <td><%=h enrollment.phone %></td>
+    <td><%=h enrollment.email %></td>
+    <td><%=h enrollment.social_security %></td>
+    <td><%=h enrollment.user_name %></td>
+    <td><%=h enrollment.password %></td>
+    <td><%=h enrollment.card_option %></td>
+    <td><%= link_to 'Show', enrollment %></td>
+    <td><%= link_to 'Edit', edit_enrollment_path(enrollment) %></td>
+    <td><%= link_to 'Destroy', enrollment, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New enrollment', new_enrollment_path %>

@@ -1,0 +1,73 @@
+<p>
+  <b>First name:</b>
+  <%=h @enrollment.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%=h @enrollment.last_name %>
+</p>
+
+<p>
+  <b>Birthdate:</b>
+  <%=h @enrollment.birthdate %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%=h @enrollment.gender %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%=h @enrollment.zip %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @enrollment.state %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @enrollment.city %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @enrollment.address %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @enrollment.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @enrollment.email %>
+</p>
+
+<p>
+  <b>Social security:</b>
+  <%=h @enrollment.social_security %>
+</p>
+
+<p>
+  <b>User name:</b>
+  <%=h @enrollment.user_name %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @enrollment.password %>
+</p>
+
+<p>
+  <b>Card option:</b>
+  <%=h @enrollment.card_option %>
+</p>
+
+
+<%= link_to 'Edit', edit_enrollment_path(@enrollment) %> |
+<%= link_to 'Back', enrollments_path %>
