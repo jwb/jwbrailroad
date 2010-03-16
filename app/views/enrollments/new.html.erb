@@ -4,67 +4,69 @@
 <% form_for(@enrollment) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :first_name %><br />
+  <table>
+  <tr><td>
+    <%= f.label :first_name %></td><td>
     <%= f.text_field :first_name %>
-  </p>
-  <p>
-    <%= f.label :last_name %><br />
+  </td></tr>
+  <tr><td>
+    <%= f.label :last_name %></td><td>
     <%= f.text_field :last_name %>
-  </p>
-  <p>
-    <%= f.label :birthdate %><br />
+  </td></tr>
+  <tr><td>
+    <%= f.label :birthdate %></td><td>
     <%= f.date_select :birthdate, 
 		:start_year => Time.now.year - 100, :end_year => Time.now.year - 12,
 		:default => Time.parse("Aug 9, 1974") %>
-  </p>
-  <p>
-    <%= f.label :gender %><br />
+  </td></tr>
+  <tr><td>
+    <%= f.label :gender %></td><td>
     <%= f.select :gender, [ 'Male', 'Female' ] %>
-  </p>
-  <p>
-    <%= f.label :zip %><br />
+  </td></tr>
+  <tr><td>
+    <%= f.label :zip %></td><td>
     <%= f.text_field :zip %>
-  </p>
-  <p>
-    <%= f.label :state %><br />
+  </td></tr>
+  <tr><td>
+    <%= f.label :state %></td><td>
     <%= f.text_field :state %>
-  </p>
-  <p>
-    <%= f.label :city %><br />
+  </td></tr>
+  <tr><td>
+    <%= f.label :city %></td><td>
     <%= f.text_field :city %>
-  </p>
-  <p>
-    <%= f.label :address %><br />
+  </td></tr>
+  <tr><td>
+    <%= f.label :address %></td><td>
     <%= f.text_field :address %>
-  </p>
-  <p>
-    <%= f.label :phone %><br />
+  </td></tr>
+  <tr><td>
+    <%= f.label :phone %></td><td>
     <%= f.text_field :phone %>
-  </p>
-  <p>
-    <%= f.label :email %><br />
+  </td></tr>
+  <tr><td>
+    <%= f.label :email %></td><td>
     <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :social_security %><br />
+  </td></tr>
+  <tr><td>
+    <%= f.label :social_security %></td><td>
     <%= f.text_field :social_security %>
-  </p>
-  <p>
-    <%= f.label :user_name %><br />
+  </td></tr>
+  <tr><td>
+    <%= f.label :user_name %></td><td>
     <%= f.text_field :user_name %>
-  </p>
-  <p>
-    <%= f.label :password %><br />
+  </td></tr>
+  <tr><td>
+    <%= f.label :password %></td><td>
     <%= f.text_field :password %>
-  </p>
-  <p>
-    <%= f.label :card_option %><br />
+  </td></tr>
+  <tr><td>
+    <%= f.label :card_option %></td><td>
     <%= f.select :card_option, [ ["Butterfly", 14], ["Glow", 26], ["Collectors", 41] ] %>
-  </p>
-  <p>
+  </td></tr>
+  <tr><td>
     <%= f.submit 'Create' %>
-  </p>
+  </td></tr>
+  </table>
 <% end %>
 
 <%= link_to 'Back', enrollments_path %>

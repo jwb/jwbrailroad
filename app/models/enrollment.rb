@@ -22,11 +22,11 @@ class Enrollment < ActiveRecord::Base
     }
     }
     result = @@soapService.doOperation :CardholderEnrollment4, soapMapping
-#    result = result.CardholderEnrollment4Response.CardholderEnrollment4Result
-#    response_code = result.ResponseCode
-#    response_description = result.ResponseDescription
-#    cardholder = result.CardholderID
-#    dda_routing_number = result.DDARoutingNumber
-#    dda_account_number = result.DDAAccountNumber
+    result = result['CardholderEnrollment4Result']
+    self[:response_code] = result['ResponseCode']
+    self[:response_description] = result['ResponseDescription']
+    self[:cardholder] = result['CardholderID']
+    self[:dda_routing_number] = result['DDARoutingNumber']
+    self[:dda_account_number] = result['DDAAccountNumber']
   end
 end

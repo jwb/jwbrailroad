@@ -67,7 +67,26 @@
   <b>Card option:</b>
   <%=h @enrollment.card_option %>
 </p>
-
+<p>
+	<b>Response Code</b>
+	<%=h @enrollment.response_code %>
+</p>
+<p>
+	<b>Response Description</b>
+	<%=h @enrollment.response_description %>
+</p>
+<p>
+	<b>Cardholder ID</b> 
+	<%= @enrollment.cardholder %>
+</p>
+<p>
+	<b>ABA Routing</b>
+	<%= @enrollment.dda_routing_number %>
+</p>
+<p>
+	<b>Account Number</b>
+	<%= @enrollment.dda_account_number %>
+</p>
 
 <%= link_to 'Edit', edit_enrollment_path(@enrollment) %> |
 <%= link_to 'Back', enrollments_path %>
